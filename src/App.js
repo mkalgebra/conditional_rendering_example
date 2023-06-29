@@ -1,25 +1,40 @@
-import logo from './logo.svg';
 import './App.css';
+import { Jednina, Mnozina, Pozdrav } from './components';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  const count = false;
+  const arr = [1,2]
+
+  // //IF-ELSE CONDITIONAL RENDERING
+  // if(count===1){
+  //   return (
+  //     <div className='App'>
+  //       <Jednina/>
+  //     </div>
+  //   )
+  // }else{
+  //   return (
+  //     <div className='App'>
+  //       <Mnozina/>
+  //     </div>
+  //   )
+  // }
+
+  // // && operator
+  // return (
+  //   <div className='App'>
+  //     {count && <Pozdrav/>}
+  //     {!arr.length && <p>Iduci</p>}
+  //   </div>
+  // )
+
+  //TERNARY OPERATOR
+  const num = 1
+  return(
+    <div className='App'>
+      {num===1 ? <Jednina/> : <Mnozina/>}
     </div>
-  );
+  )
 }
 
 export default App;
